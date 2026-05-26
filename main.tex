@@ -1,0 +1,183 @@
+\documentclass{beamer}
+
+%   Theme & Encoding
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usetheme{Boadilla}
+
+%   Math
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{bm}
+\usepackage{physics}
+
+% Graphics
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+%   References
+\usepackage[backend=biber, style=authoryear, sorting=nty]{biblatex}
+\addbibresource{reference.bib}
+\usepackage{cleveref}
+\usepackage{hyperref}
+
+
+%   Document Metadata
+\title[Binary Payment Schemes]{Binary Payment Schemes: \\ Moral Hazard and Loss Aversion}
+\subtitle{\cite{Herweg2010} \\ A Literature Review}
+\author{Theo Osterhaus, 7443693}
+\date[May 2026]{Seminar Market Design and Behaviour, SS 2026}
+\institute[Uni Köln]{Department of Economics\\ Universität zu Köln}
+
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+\section{Contract Theory \& Incentive Schemes}
+
+\begin{frame}{Contractual Form Matters: A Problem of Decades}
+
+    \begin{itemize}
+    \setlength{\itemsep}{8pt}
+        \item \textbf{Observation:} Real-world contracts are often remarkably \textbf{simple} (e.g., binary bonus schemes, flat wages).
+        \item \textbf{Classical Contract Theory} \parencite{Holmstroem1979}: Optimal contracts should be \textbf{complex}, exploiting all available information.
+    \end{itemize}
+
+    \bigskip
+    
+    \begin{block}{The Central Puzzle}
+        If contractual form matters so much, why do we observe such a prevalence
+        of relatively simple contracts? 
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}{The Puzzle of Contract Simplicity}
+
+    \textbf{\textcite{Prendergast1999}: \textit{The Provision of Incentives in Firms}}
+
+    \smallskip
+    
+    \begin{itemize}
+    \setlength{\itemsep}{4pt}
+        \item \textbf{Established the puzzle:\footnote{\textcite{Baker1988} first documented this discrepancy}} Real contracts are far simpler than theory predicts.
+        \begin{itemize}
+        \setlength{\itemsep}{3pt}
+        \item Highlights the disconnect between complex theoretical prescriptions and standard contractual practice.
+        \item \textbf{Methodological limit:} Survey-based, no causal identification of \emph{why} simplicity prevails.
+        
+        \end{itemize}
+    \end{itemize}
+
+    \medskip
+    
+    \textbf{\textcite{Lazear2007}: \textit{Personnel Economics}}
+
+    \smallskip
+    
+    \begin{itemize}
+    \setlength{\itemsep}{4pt}
+        \item \textbf{Sharpens the puzzle:} Argues there must be benefits to simple contracts that classical theory misses.
+        \begin{itemize}
+        \setlength{\itemsep}{3pt}
+        \item Bridges the gap between theoretical models and applied personnel economics.
+        \item \textbf{Open question:} What \emph{exactly} are these benefits? --- This is where \textcite{Herweg2010} enters.
+        \end{itemize}
+    \end{itemize}
+    
+\end{frame}
+
+\section{Theoretical Framework}
+\begin{frame}{A Behavioural Explanation}
+    \textcite{Herweg2010} address this puzzle by introducing \textbf{expectation-based loss aversion} into the standard principal--agent model with moral hazard, building on \textcite{Koszegi2006}.
+
+    \medskip
+
+    \textbf{The K\H{o}szegi--Rabin Concept:}
+
+    \smallskip
+    
+    \begin{itemize}
+    \setlength{\itemsep}{10pt}
+        \item Individuals evaluate outcomes relative to a \textbf{reference point}; losses loom larger than comparable gains \parencite{Kahneman1979}.
+        \item In stochastic settings, the reference point is the \textbf{entire probability distribution} of wages the agent anticipates.
+        \item The agent compares the realised wage against \textbf{every possible wage realisation} in that reference lottery, incurring a psychological cost for each unfavourable comparison.
+    \end{itemize}
+\end{frame}
+
+\section{Model Results}
+\begin{frame}{Main Result: Why Binary Schemes?}
+    In \textcite{Herweg2010}, the agent plays a \textbf{Choice-Acclimating Personal Equilibrium (CPE)}: he correctly anticipates the wage distribution induced by his effort, and this anticipated distribution becomes his reference point.\footnote{See \textcite{koszegi2007} for the formal definition of CPE.}
+    
+    \medskip
+    
+    \textcite{Herweg2010} identify a trade-off of two opposing effects of adding wage levels:
+    
+    \medskip
+    
+    \begin{enumerate}
+        \item \textbf{Incentive Gain:} More wage levels (complexity) provide better incentives. More wage levels $\Rightarrow$ finer performance signals $\Rightarrow$ higher marginal returns to effort.
+        \item \textbf{Loss Aversion Cost:}  Every additional wage level enlarges the support of the agent’s stochastic reference distribution. This creates more possible unfavourable comparisons (realised wage falls short of other anticipated outcomes), raising expected psychological costs.
+    \end{enumerate}
+\end{frame}
+
+\section{Empirical Support}
+\begin{frame}{Do Expectations Really Matter? Empirical Support}
+    The behavioural foundations of the model by \textcite{Herweg2010} rest on a well-established empirical foundation:
+    \vspace{0.2cm}
+    \begin{itemize}
+    \setlength{\itemsep}{8pt}
+        \item \textbf{Labour Supply (Cab Drivers):} \textcite{Crawford2011} shows that a model
+              with expectation-based targets significantly outperforms the neoclassical benchmark in predicting cab drivers' effort.
+        \item \textbf{Lab Evidence (Real-Effort):} \textcite{Abeler2011} demonstrates that directly manipulating subjects' expectations shifts effort provision in the direction predicted by loss aversion models.
+    \end{itemize}
+    
+    \medskip
+    
+\end{frame}
+
+\section{Outlook}
+\begin{frame}{From Theory to Experiment: Looking Ahead}
+
+    \begin{alertblock}{Why Binary Schemes?}
+        The central prediction, that binary schemes are optimal, has not yet been directly tested. This is addressed in the second presentation.
+    \end{alertblock}
+
+    \bigskip
+     
+    \textbf{Subsequent Theoretical Work:} \textcite{Herweg2015} extend the framework to dynamic settings:
+    \begin{itemize}
+        \item Expectation-based loss aversion can explain \emph{inefficient renegotiation}
+        \item Evidence that the mechanism has explanatory power beyond \textbf{static} moral hazard
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Backup: A Binary Scheme}
+    A binary scheme contains only two wage realisations, minimising loss aversion costs while still providing meaningful incentives.
+
+    \bigskip
+    
+    \begin{block}{The Optimality Theorem}
+        When loss aversion is sufficiently high, the principal minimises these psychological costs by offering a \textbf{base wage} and a \textbf{single bonus}, even if a much richer set of performance signals is available.
+    \end{block}
+
+    \bigskip
+        
+    Standard contract theory instead predicts a \emph{fully contingent} wage schedule \parencite{Holmstroem1979}.
+\end{frame}
+
+
+\section*{References}
+\begin{frame}[allowframebreaks]{References}
+    \printbibliography
+\end{frame}
+
+\end{document}
