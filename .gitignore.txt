@@ -1,20 +1,19 @@
-# .gitignore – LaTeX Hilfsdateien
+# LaTeX temporary files
 *.aux
 *.log
 *.out
 *.toc
-*.lof
-*.lot
+*.nav
+*.snm
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-*.bbl
-*.blg
 *.bcf
 *.run.xml
-*.nav
-*.snm        # Beamer-spezifisch
-*.vrb        # Beamer-spezifisch
 
-# Kompiliertes PDF optional tracken
-# main.pdf   # Auskommentieren = PDF wird getrackt
+# R files
+.Rhistory
+.RData
+
+# Build output
+output/
