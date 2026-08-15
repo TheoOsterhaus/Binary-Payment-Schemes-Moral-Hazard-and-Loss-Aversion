@@ -6,13 +6,13 @@ on:
       - main
     paths:
       - "main.tex"
-      - "references.bib"
+      - "reference.bib"
       - "figures/**"
       - ".github/workflows/build-pdf.yml"
   pull_request:
     paths:
       - "main.tex"
-      - "references.bib"
+      - "reference.bib"
       - "figures/**"
   workflow_dispatch:
 
@@ -27,7 +27,7 @@ jobs:
       - name: Repository auschecken
         uses: actions/checkout@v6
 
-      - name: Prüfen, dass nur main.tex und references.bib vorhanden sind
+      - name: Prüfen, dass nur main.tex und reference.bib vorhanden sind
         run: |
           set -euo pipefail
           tex_files=$(find . -name "*.tex" -not -path "./.git/*")
@@ -40,8 +40,8 @@ jobs:
             exit 1
           fi
 
-          if [ "$bib_count" -ne 1 ] || [ "$bib_files" != "./references.bib" ]; then
-            echo "::error::Es darf nur eine Datei 'references.bib' im Projekt geben."
+          if [ "$bib_count" -ne 1 ] || [ "$bib_files" != "./reference.bib" ]; then
+            echo "::error::Es darf nur eine Datei 'reference.bib' im Projekt geben."
             exit 1
           fi
 
